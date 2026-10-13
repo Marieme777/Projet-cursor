@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Composant Pricing Card</title>
+<style>
+/* --- STYLES GLOBAUX DU COMPOSANT (Écrits une seule fois) --- */
+.pricing-container {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+}
+
+.pricing-card {
+  width: 300px;
+  background-color: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  border-radius: 8px;
+  padding: 24px;
+  text-align: left;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.pricing-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+.pricing-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 8px;
+}
+
+.pricing-price {
+  font-size: 22px;
+  font-weight: 600;
+  color: #2e7d32;
+  margin-bottom: 20px;
+}
+
+.pricing-features {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 24px;
+}
+
+.pricing-features li {
+  padding: 8px 0;
+  border-bottom: 1px solid #f0f0f0;
+  color: #555;
+  font-size: 14px;
+}
+
+.pricing-btn {
+  width: 100%;
+  background-color: #2563eb;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.pricing-btn:hover {
+  background-color: #1d4ed8;
+}
+</style>
+</head>
+<body>
+
+<!-- CONTENEUR GLOBAL -->
+<div class="pricing-container">
+
+  <!-- CARTE 1 : Plan Basic -->
+  <div class="pricing-card">
+    <h2 class="pricing-title">Basic Plan</h2>
+    <p class="pricing-price">5 000 FCFA / mois</p>
+    <ul class="pricing-features">
+      <li>1 Go Stockage</li>
+      <li>Support de base</li>
+      <li>Accès aux fonctionnalités clés</li>
+    </ul>
+    <button class="pricing-btn">Choisir ce plan</button>
+  </div>
+
+  <!-- CARTE 2 : Plan Pro (Réutilisation exacte du même composant HTML) -->
+  <div class="pricing-card">
+    <h2 class="pricing-title">Pro Plan</h2>
+    <p class="pricing-price">15 000 FCFA / mois</p>
+    <ul class="pricing-features">
+      <li>50 Go Stockage</li>
+      <li>Support prioritaire 24/7</li>
+      <li>Fonctionnalités avancées</li>
+    </ul>
+    <button class="pricing-btn">Choisir ce plan</button>
+  </div>
+
+</div>
+
+</body>
+</html>
